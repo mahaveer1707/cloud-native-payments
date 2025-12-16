@@ -19,7 +19,7 @@ def create_payment(payment: PaymentCreate):
         status="CREATED"
     )
     PAYMENTS_DB[payment_id] = new_payment
-    logger.info("Payment created", extra={"payment_id": str(payment_id)})
+    logger.info("Payment created Successfully", extra={"payment_id": str(payment_id)})
     return new_payment
 
 @router.get("/payments/{payment_id}", response_model=Payment)
